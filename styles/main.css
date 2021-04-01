@@ -1,0 +1,500 @@
+/* Written by Mantas Šakalis, 2020 */
+
+
+/* UNIVERSAL STYLES */
+
+@font-face {
+  font-family: "Kurkku";
+  src: url(../fonts/Kurkku.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Titillium Web";
+  src: url(../fonts/TitilliumWeb-Regular.ttf) format("truetype");
+}
+
+body {
+  font-family: "Titillium Web", serif;
+  font-size: 16px;
+  margin: 0;
+  background-color: rgb(222,243,246);
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext-small {
+  visibility: hidden;
+  width: 4rem;
+  background-color: rgb(170, 21, 27);
+  color: rgb(241, 191, 0);
+  text-align: center;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  position: absolute;
+  z-index: 1;
+  top: -0.275rem;
+  left: 105%;
+  opacity: 1;
+}
+
+.tooltip .tooltiptext-medium {
+  visibility: hidden;
+  width: 13rem;
+  background-color: rgb(6, 66, 115);
+  color: rgb(222, 243, 246);
+  text-align: center;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -3.75rem;
+  opacity: 1;
+}
+
+.tooltip:hover .tooltiptext-small,
+.tooltip:hover .tooltiptext-medium {
+  visibility: visible;
+}
+
+/* Universal Styles END */
+
+/*--------*/
+.main {
+  background-image: url(../images/main-header-image-3.jpg);
+  background-position: bottom;
+  background-position-x: center;
+  background-size: cover;
+  height: 42rem;
+}
+
+.main .flex-container {
+  padding-top: 1rem;
+  justify-content: space-between;
+}
+/*--------*/
+
+
+/* --- .first --- */
+
+#nav-two {
+  display: none;
+}
+
+/* .left */
+.flex-container .left {
+  margin-left: 10rem;
+  flex-direction: column;
+}
+
+.mantas span,
+.sakalis span {
+  font-family: "Kurkku", sans-serif;
+  font-size: 10rem;
+  color: rgba(29,162,216,1);
+  transition-duration: 500ms;
+  text-shadow: 0 0.2rem 0.2rem rgba(6,66,115,1);
+  cursor: crosshair;
+}
+
+.mantas span:hover,
+.sakalis span:hover {
+  color: rgba(6,66,115,1);
+  text-shadow: 0.2rem 0 0.2rem rgba(6,66,115,0.7);  
+}
+
+.mantas {
+  text-align: center;
+  padding: 0.1rem 2rem 0.1rem 2rem;
+}
+
+.left nav {
+  text-align: center;
+  padding: 1rem;
+}
+
+.left nav a {
+  color: rgba(6,66,115,0.6);
+  display: inline;
+  text-decoration: none;
+  text-shadow: 1px black;
+  font-size: 1rem;
+  padding: 1rem;
+  border: 0.02em solid rgba(222,243,246,0);
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+  background-color: rgba(127,205,255,0);
+  transition-duration: 300ms;
+}
+
+.left nav a:hover {
+  color: rgba(222,243,246,1);
+  border: 0.02rem solid rgba(222,243,246,0.2);
+  background-color: rgba(127,205,255,0.3);
+}
+
+.sakalis {
+  text-align: center;
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.first .right {
+  margin: 1.5rem 13rem 0.1rem 7rem;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  width: 30rem;
+  border: 0.1rem solid rgba(222,243,246,0);
+  border-radius: 1rem;
+  padding-bottom: 0.8rem;
+}
+
+.first .right:hover {
+  background-color: rgba(127,205,255,0.2);
+  border: 0.1rem solid rgba(222,243,246,0.1);
+}
+
+
+/* .right */
+.right img {
+  border-radius: 1rem;
+  width: 13rem;
+  height: 11rem;
+  margin: 1rem;
+  opacity: 0.5;
+}
+
+.right img:hover {
+  opacity: 1;
+}
+
+/* --- .first ends here --- */
+
+
+
+/* --- .second --- */
+.second .left {
+  margin-left: 6rem;
+  margin-top: 3rem;
+  flex-direction: row;
+  align-items: center;
+  cursor: crosshair;
+}
+
+.second .left img {
+  width: 16rem;
+  height: auto;
+  border-radius: 8rem;
+  margin: 2rem;
+}
+
+.second .left img:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+
+}
+
+.second .bio {
+  flex-direction: column;
+  text-align: left;
+  height: auto;
+}
+
+
+.second .bio span {
+  color: rgb(6, 66, 115);
+  line-height: unset;
+  font-size: 1rem;
+  
+  text-shadow: rgb(222,243,246) 0.05rem 0.05rem 0;
+}
+
+.bio span.bigger {
+  font-size: 1.2rem;
+}
+
+.bio .underline {
+  border-bottom: 0.05rem dotted rgba(6, 66, 115, 0.25);
+  width: 13.95rem;
+}
+
+
+.second .right {
+  padding: 0.1rem 5rem 0.1rem 0.1rem;
+  flex-direction: column;
+  color: rgb(6,66,115);
+}
+
+.second .right:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(2px, 0, 0);
+}
+}
+
+.second .right h1 {
+  margin-left: 3rem;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+}
+
+table {
+  margin: -1.7rem 1rem 1.7rem 1rem;
+}
+
+
+table .txt-center {
+  text-align: center;
+}
+
+table .txt-left {
+  text-align: left;
+}
+
+table th {
+  font-size: 1.4rem;
+  border-bottom: 0.2rem dotted rgb(6 ,66 , 115);
+}
+
+table td {
+  border-radius: 0.5rem;
+}
+
+table th,
+table td {
+  padding: 0.5rem 0 0.5rem 0.5rem;
+}
+
+img.flag {
+  margin: 0 0.4rem 0 0.1rem !important;
+  padding: 0 0 0.1rem 0 !important;
+  opacity: 1;
+  border-radius: 0.2rem;
+  width: 1.3rem !important;
+  height: 0.8rem !important;
+  border-bottom: 0.05rem dotted rgb(6, 66, 115);
+}
+
+.nabuurs {
+  background-color: rgba(255, 79, 0, 0);
+
+}
+
+.nabuurs:hover {
+  background-color: rgba(255, 79, 0, 1);
+  color: rgb(222, 243, 246);
+}
+
+.p2p {
+  background-color: rgba(1, 33, 105, 0);
+}
+
+.p2p:hover {
+  background-color: rgba(1, 33, 105, 1);
+  color: rgb(222, 243, 246);
+}
+
+.quantrelle {
+  background-color: rgba(200, 16, 46, 0);
+}
+
+.quantrelle:hover {
+  background-color: rgba(200, 16, 46, 1);
+  color: rgb(222, 243, 246);
+
+}
+
+/* --- .second ends here --- */
+
+
+
+
+
+
+
+
+
+
+/* BRAKE POINTS */
+
+@media only screen and (max-width: 1622px) { /* --- 1 6 2 2 --- */
+ .second .left {
+    flex-direction: column;
+  }
+  .second .bio {
+    text-align: center;
+    
+    margin-bottom: 1.7rem;
+  }
+  .bio .underline {
+    margin-left: 0.8rem;
+  }
+  .second .left {
+    margin-top: 0;
+  }
+  .right .jobs {
+    margin-top: 4.7rem;
+  }
+  .second .right h1 {
+    margin-left: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 1236px) { /* --- 1 2 3 6 --- */
+  .main .flex-container {
+    padding-top: 1rem;
+    justify-content: center;
+  }
+  #nav-one {
+    display: none;
+  }
+  #nav-two {
+    display: flex;
+  }
+  .flex-container .left {
+    margin-left: 0;
+    flex-direction: column;
+  }
+  .left nav {
+    text-align: center;
+    padding: 1rem;
+    align-self: center;
+    margin-bottom: 1rem;
+  }
+  .margin-right {
+    margin-right: 1rem;
+  }
+  .margin-left {
+    margin-left: 1rem;
+  }
+  .sakalis {
+    padding: 0.1rem 2rem 0.1rem 2rem;
+  }
+  .flex-container .right {
+    margin: 1.5rem 0 0.1rem 0;
+    flex-flow: row wrap;
+    width: auto;
+  }
+  .flex-container .right img {
+    margin: 1rem 7rem;
+  }
+  .flex-container .second {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+  .second .left {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+  .main .second {
+    padding-top: 1rem;
+    justify-content: space-around;
+  }
+  .second .right {
+    width: 50%;
+  }
+  .right .jobs {
+    margin-top: 3rem;
+  }
+}
+
+@media only screen and (max-width: 895px) { /* --- 8 9 5 --- */
+  .flex-container .left {
+    margin-left: 0;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+  }
+  .second .left img {
+    width: 12rem;
+  }
+  .second .bio span {
+    font-size: 0.8rem;
+  }
+  .bio span.bigger {
+    font-size: 1rem;
+  }
+  .flex-container .right {
+    padding: 1.5rem 1rem 0.1rem 1rem;
+  }
+  .flex-container .right img {
+    margin: 1rem 3rem;
+  }
+}
+
+@media only screen and (max-width: 803px) { /* --- 8 0 3 --- */
+  .flex-container .right img {
+    margin: 1rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 675px) { /* --- 6 7 5 --- */
+  .mantas {
+    padding: 0.1rem 0 0.1rem 0;
+  }
+  .sakalis {
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  .flex-container .right img {
+    margin: 1rem 1rem;
+    width: 11rem;
+    height: 8rem;
+  }
+  .mantas span,
+  .sakalis span {
+    font-size: 9rem;
+  }
+  .left nav a {
+    font-size: 0.8rem;  
+    padding: 0.7rem;
+  }
+  .second .bio span {
+    padding: 0 0.5rem;
+  }
+  .second .right h1 {
+    font-size: 1.45rem;
+    margin-left: 2.4rem;
+  }
+  table {
+    margin: -1.2rem 1rem 1.7rem 1rem;
+    width: 100vw;
+  }
+  table th {
+    border-bottom: 0.2rem dotted rgb(6 ,66 , 115);
+  }
+  table th,
+  table td {
+      font-size: 0.8rem;
+  }
+}
+
